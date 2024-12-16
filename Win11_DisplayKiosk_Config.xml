@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssignedAccessConfiguration xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AssignedAccess/2017/config" xmlns:default="http://schemas.microsoft.com/AssignedAccess/2017/config" xmlns:rs5="http://schemas.microsoft.com/AssignedAccess/201810/config" xmlns:v3="http://schemas.microsoft.com/AssignedAccess/2020/config" xmlns:v5="http://schemas.microsoft.com/AssignedAccess/2022/config">
   <Profiles>
-    <Profile Id="{ID Number}">
+    <Profile Id="{ID}">
       <AllAppsList>
         <AllowedApps>
-		  <App DesktopAppPath="C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE" />
-          <App DesktopAppPath="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"  rs5:AutoLaunch="true" />
+          <!-- Launch PowerPoint and open the specific presentation -->
+          <App DesktopAppPath="C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE" 
+               rs5:AutoLaunch="true" 
+               rs5:AutoLaunchArguments="/s C:\Presentations\current_presentation.pptx" />
+          <App DesktopAppPath="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" />
         </AllowedApps>
       </AllAppsList>
       <rs5:FileExplorerNamespaceRestrictions>
@@ -24,7 +27,7 @@
   <Configs>
     <Config>
       <AutoLogonAccount rs5:DisplayName="KioskUser" />
-      <DefaultProfile Id="{ID Number}" />
+      <DefaultProfile Id="{ID}" />
     </Config>
   </Configs>
 </AssignedAccessConfiguration>
