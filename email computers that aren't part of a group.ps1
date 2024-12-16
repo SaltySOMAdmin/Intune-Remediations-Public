@@ -6,7 +6,7 @@ $filePath = "c:\temp\computerlist.csv"
 $ouDN = "OU="
 
 # Get all computer accounts in the Surgery OU
-$computersInSurgeryOU = Get-ADComputer -Filter {Enabled -eq $True -and Name -notlike "UMNA-SimardNAS" -and Name -notlike "surgfslogixprof" -and Name -notlike "SURG-BACKUP3" -and Name -notlike "surg3ct" -and Name -notlike "MSP-VCSA" -and Name -notlike "surgisstore"} -SearchBase $ouDN -Property MemberOf, enabled
+$computersInSurgeryOU = Get-ADComputer -Filter {Enabled -eq $True} -SearchBase $ouDN -Property MemberOf, enabled
 
 # Filter out computers that are not members of any groups
 $computersNotInGroups = $computersInSurgeryOU | Where-Object { -not $_.MemberOf }
