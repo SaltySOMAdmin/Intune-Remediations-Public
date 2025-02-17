@@ -31,6 +31,15 @@ $msiCodes = @(
     "{8864B390-4DFB-43AB-934B-F02C48577666}", # DisplayName: Python 3.7.5 Executables (64-bit)
     "{A5AC50DE-D446-4AF2-8D83-8BC548B57C31}", # DisplayName: Python 3.7.5 Test Suite (64-bit symbols)
     "{B33E7CE3-8BFE-4F55-8505-2F74D97392C4}", # DisplayName: Python 3.7.5 Documentation (64-bit)
+	"{09CC0C6D-0822-491E-A10E-2A8443DDF170}", # DisplayName: Python 3.8.2 Standard Library (32-bit)
+	"{12B4F371-ACE2-435B-BCF1-623F36C4E176}", # DisplayName: Python 3.8.2 Development Libraries (32-bit)
+	"{2E818780-AC79-4BC0-8023-C1CC46EAC9B6}", # DisplayName: Python 3.8.2 pip Bootstrap (32-bit)
+	"{45CEE0C6-5BB2-4A8B-B83C-58559A1CA424}", # DisplayName: Python 3.8.2 Documentation (32-bit)
+	"{6BA6203C-85AB-4B9E-8582-CE31B1B5C0ED}", # DisplayName: Python 3.8.2 Core Interpreter (32-bit)
+	"{B1528EAE-7E64-49DB-8CE1-514EB30BB38B}", # DisplayName: Python 3.8.2 Tcl/Tk Support (32-bit)
+	"{E284B869-7701-4A91-82C2-D3E66974A0F9}", # DisplayName: Python 3.8.2 Utility Scripts (32-bit)
+	"{EE21EEE7-9D5A-4ECE-B60F-4BFA63BDA937}", # DisplayName: Python 3.8.2 Test Suite (32-bit)
+	"{FE5BE50D-21D5-44FB-9A97-5010E68608DA}", # DisplayName: Python 3.8.2 Executables (32-bit)
 	"{08D7A4E8-F704-409B-A676-457432DA3248}", # DisplayName: Python 3.10.7 Standard Library (64-bit)
 	"{099B73AD-9E34-4ADF-B982-7E3A75610CA6}", # DisplayName: Python 3.10.7 Test Suite (64-bit)
 	"{30C9588C-5E1D-479E-988A-DA38CADFA384}", # DisplayName: Python 3.10.7 pip Bootstrap (64-bit)
@@ -77,6 +86,10 @@ $msiCodes = @(
 	"{EFA83559-2E1E-4671-85F7-B28AA1DD08D7}", # DisplayName: Python 3.12.4 pip Bootstrap (64-bit)
 	"{3C4935A5-B72E-4DA4-809E-0287A0BC046F}"  # DisplayName: Python 3.12.4 Launcher (64-bit)
 )
+
+
+
+
 
 # Loop through all MSI codes and call Remove-Program
 foreach ($code in $msiCodes) {
